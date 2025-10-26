@@ -1,6 +1,6 @@
 "use client";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 const events = [
@@ -18,8 +18,17 @@ const events = [
 ];
 
 const TimeLine = () => {
-  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
+  const [isClient, setIsClient] = useState(false);
+  const { ref, inView } = useInView({ 
+    triggerOnce: false, 
+    threshold: 0.2,
+    skip: typeof window === 'undefined' // Skip during SSR
+  });
   const controls = useAnimation();
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     if (inView) {
@@ -43,9 +52,7 @@ const TimeLine = () => {
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2, duration: 0.5 }}
-            viewport={{ once: false }}
+            {...(isClient && { whileInView: { opacity: 1, y: 0 }, transition: { delay: index * 0.2, duration: 0.5 }, viewport: { once: false } })}
             className={`flex xl:flex-col flex-row  items-center max-w-xs text-center gap-6 ${
               index % 2 === 0
                 ? "xl:order-first xl:flex-col-reverse xl:mb-3 "

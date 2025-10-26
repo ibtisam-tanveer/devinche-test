@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -10,6 +10,11 @@ const Footer: React.FC = () => {
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -121,13 +126,12 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-12"
+          {...(isClient && { whileInView: "visible", viewport: { once: true, margin: "-100px" } })}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12"
         >
           {/* Company Info */}
           <motion.div variants={itemVariants} className="lg:col-span-2">
@@ -173,7 +177,7 @@ const Footer: React.FC = () => {
                 />
               </motion.div>
               <motion.h3 
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
+                className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
                 animate={{
                   backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                 }}
@@ -188,7 +192,7 @@ const Footer: React.FC = () => {
             </motion.div>
             
             <motion.p 
-              className="text-gray-300 mb-8 max-w-lg leading-relaxed text-base sm:text-lg"
+              className="text-gray-300 mb-8 max-w-lg leading-relaxed text-lg"
               variants={itemVariants}
             >
               Empowering the future through innovative technology solutions and cutting-edge development practices. We build tomorrow's digital experiences today.
@@ -233,18 +237,17 @@ const Footer: React.FC = () => {
           {/* Quick Links */}
           <motion.div variants={itemVariants}>
             <motion.h4 
-              className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6 sm:mb-8 relative"
+              className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-8 relative"
               whileHover={{ scale: 1.05 }}
             >
               Quick Links
               <motion.div 
                 className="absolute -bottom-2 left-0 w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"
                 initial={{ width: 0 }}
-                whileInView={{ width: "4rem" }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                {...(isClient && { whileInView: { width: "4rem" }, transition: { duration: 0.8, delay: 0.5 } })}
               />
             </motion.h4>
-            <motion.ul className="space-y-4 sm:space-y-6" variants={containerVariants}>
+            <motion.ul className="space-y-6" variants={containerVariants}>
               {[
                 { name: 'About Us', href: '/about', icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
                 { name: 'Contact', href: '/contact', icon: 'M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
@@ -254,7 +257,7 @@ const Footer: React.FC = () => {
                 <motion.li key={link.name} variants={itemVariants}>
                   <motion.a 
                     href={link.href} 
-                    className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group text-base sm:text-lg hover:bg-white/5 rounded-lg px-3 py-2"
+                    className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group text-lg hover:bg-white/5 rounded-lg px-3 py-2"
                     whileHover={{ x: 10, scale: 1.02 }}
                   >
                     <motion.div 
@@ -286,8 +289,7 @@ const Footer: React.FC = () => {
               <motion.div 
                 className="absolute -bottom-2 left-0 w-16 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"
                 initial={{ width: 0 }}
-                whileInView={{ width: "4rem" }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                {...(isClient && { whileInView: { width: "4rem" }, transition: { duration: 0.8, delay: 0.5 } })}
               />
             </motion.h4>
             <motion.div className="space-y-6" variants={containerVariants}>
@@ -328,8 +330,7 @@ const Footer: React.FC = () => {
               <motion.div 
                 className="absolute -bottom-2 left-0 w-16 h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full"
                 initial={{ width: 0 }}
-                whileInView={{ width: "4rem" }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                {...(isClient && { whileInView: { width: "4rem" }, transition: { duration: 0.8, delay: 0.5 } })}
               />
             </motion.h4>
             
@@ -375,8 +376,7 @@ const Footer: React.FC = () => {
               <motion.div 
                 className="absolute -bottom-2 left-0 w-16 h-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-full"
                 initial={{ width: 0 }}
-                whileInView={{ width: "4rem" }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                {...(isClient && { whileInView: { width: "4rem" }, transition: { duration: 0.8, delay: 0.5 } })}
               />
             </motion.h4>
             
@@ -385,8 +385,7 @@ const Footer: React.FC = () => {
               className="space-y-4"
               variants={containerVariants}
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
+              {...(isClient && { whileInView: "visible", viewport: { once: true } })}
             >
               <motion.div variants={itemVariants}>
                 <input
@@ -426,10 +425,9 @@ const Footer: React.FC = () => {
 
         {/* Bottom Section */}
         <motion.div 
-          className="mt-16 sm:mt-20 pt-6 sm:pt-8 border-t border-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"
+          className="mt-20 pt-8 border-t border-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          {...(isClient && { whileInView: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay: 0.5 } })}
         >
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
             <motion.div 
@@ -445,7 +443,7 @@ const Footer: React.FC = () => {
               <span className="text-cyan-400">Made with ❤️</span>
             </motion.div>
             <motion.div 
-              className="flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm"
+              className="flex flex-wrap gap-6 text-sm"
               variants={containerVariants}
             >
               {[

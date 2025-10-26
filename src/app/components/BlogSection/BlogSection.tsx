@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { blogPosts, BlogPost } from '../../data/blogData';
 import Link from 'next/link';
@@ -8,6 +8,11 @@ import Image from 'next/image';
 
 const BlogSection = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -54,9 +59,7 @@ const BlogSection = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          {...(isClient && { whileInView: { opacity: 1, y: 0 }, transition: { duration: 0.6 }, viewport: { once: true } })}
           className="text-center mb-20"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-6">
@@ -75,8 +78,7 @@ const BlogSection = () => {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          {...(isClient && { whileInView: "visible", viewport: { once: true, margin: "-100px" } })}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {blogPosts.map((post) => (
@@ -162,9 +164,7 @@ const BlogSection = () => {
         {/* View All Button */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
+          {...(isClient && { whileInView: { opacity: 1, y: 0 }, transition: { duration: 0.6, delay: 0.4 }, viewport: { once: true } })}
           className="text-center mt-16"
         >
           <Link

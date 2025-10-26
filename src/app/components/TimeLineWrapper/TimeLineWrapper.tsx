@@ -1,14 +1,20 @@
 'use client'
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import Section from "../Section/Section";
 import TimelineObserver from "react-timeline-animation";
 import RoadMap from "../RoadMap/RoadMap";
 
 
 const TimeLineWrapper = () => {
+  const [isClient, setIsClient] = useState(false);
+  
   const onCallback = () => {
     console.log("awesome");
   };
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <section className="min-h-screen py-20 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 relative">
@@ -21,18 +27,26 @@ const TimeLineWrapper = () => {
 
       <div className="max-w-7xl mx-auto">
         <div id="timeline">
-          <TimelineObserver
-            hasReverse
-            initialColor="rgba(255, 255, 255, 0.1)"
-            fillColor="rgba(6, 182, 212, 0.8)"
-            handleObserve={(setObserver:any) => (
-              <RoadMap
-                callback={onCallback}
-                className="timeline"
-                setObserver={setObserver}
-              />
-            )}
-          />
+          {isClient ? (
+            <TimelineObserver
+              hasReverse
+              initialColor="rgba(255, 255, 255, 0.1)"
+              fillColor="rgba(6, 182, 212, 0.8)"
+              handleObserve={(setObserver:any) => (
+                <RoadMap
+                  callback={onCallback}
+                  className="timeline"
+                  setObserver={setObserver}
+                />
+              )}
+            />
+          ) : (
+            <RoadMap
+              callback={onCallback}
+              className="timeline"
+              setObserver={() => {}}
+            />
+          )}
         </div>
       </div>
     </section>

@@ -11,6 +11,9 @@ const HeroSection = () => {
     const [cursorType, setCursorType] = useState('spring'); // 'default', 'glow', 'pulse', 'trail', 'spring'
 
     useEffect(() => {
+        // Check if we're in the browser environment
+        if (typeof window === 'undefined') return;
+
         const checkMobile = () => {
             setIsMobile(window.innerWidth < 768);
         };
@@ -28,6 +31,9 @@ const HeroSection = () => {
     }, []);
 
     useEffect(() => {
+        // Check if we're in the browser environment
+        if (typeof window === 'undefined') return;
+
         let animationFrameId: number;
 
         const handleMouseMove = (e: MouseEvent) => {

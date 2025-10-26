@@ -10,6 +10,9 @@ const AboutPage: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Check if we're in the browser environment
+    if (typeof window === 'undefined') return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
