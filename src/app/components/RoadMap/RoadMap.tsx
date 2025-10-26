@@ -92,7 +92,7 @@ const RoadMap = ({ setObserver, callback }: any) => {
 
   return (
     <>
-      <div className="text-center mb-20" id="roadmap">
+      <div className="text-center mb-20 xs:mt-10 md:mt-0" id="roadmap">
         <div className="inline-block px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 text-sm font-medium mb-8 text-white/80">
           Our Journey
         </div>

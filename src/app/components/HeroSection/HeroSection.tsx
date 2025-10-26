@@ -193,7 +193,7 @@ const HeroSection = () => {
                                     // Optimize for mobile performance
                                     ...(isMobile && {
                                         pointerEvents: 'none',
-                                        transform: 'scale(0.7)',
+                                        transform: 'scale(1)',
                                         transformOrigin: 'center'
                                     })
                                 }}
