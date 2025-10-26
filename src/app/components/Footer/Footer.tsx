@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Spline from '@splinetool/react-spline';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -70,8 +71,15 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
+      {/* Spline 3D Background - Interactive Layer */}
+      <div className="absolute inset-0 w-full h-full z-5 opacity-20">
+       <Spline
+        scene="https://prod.spline.design/iXg1Xm5hgqiM2wkE/scene.splinecode" 
+      />
+      </div>
+
       {/* Enhanced Animated Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Floating particles with improved animation */}
         <div className="absolute inset-0">
           {[...Array(30)].map((_, i) => (
@@ -126,7 +134,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
