@@ -346,14 +346,14 @@ const AboutPage: React.FC = () => {
                   >
                     Get in Touch
                   </motion.a>
-                  <motion.a
+                  {/* <motion.a
                     href="/portfolio"
                     className="bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:scale-105 border border-white/20"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     View Our Work
-                  </motion.a>
+                  </motion.a> */}
                 </motion.div>
               </div>
             </motion.div>

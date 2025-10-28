@@ -35,9 +35,9 @@ PWAs continue to bridge the gap between web and native applications, offering of
 
 The future of web development is bright, with new technologies constantly emerging to make development more efficient and user experiences more engaging.
     `,
-    author: "John Doe",
+    author: "Valleria",
     date: "2024-01-15",
-    image: "/images/elon.jpg",
+    image: "/images/aa.webp",
     tags: ["Web Development", "Technology", "Future"],
     readTime: "5 min read"
   },
@@ -72,9 +72,9 @@ Implement proper memoization and code splitting to ensure optimal performance.
 
 Following these practices will help you build React applications that are maintainable, performant, and scalable.
     `,
-    author: "Jane Smith",
-    date: "2024-01-10",
-    image: "/images/elon.jpg",
+    author: "Mariia",
+    date: "2024-01-18",
+    image: "/images/aa.webp",
     tags: ["React", "JavaScript", "Frontend"],
     readTime: "7 min read"
   },

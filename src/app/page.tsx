@@ -10,14 +10,14 @@ import TimeLineWrapper from './components/TimeLineWrapper/TimeLineWrapper';
 
 export default function Home() {
   return (
-  <>
-  <HeroSection/>
-  <VisionMissionSection/>
-  <VisionMissionCardReveal/>
-   <TimeLineWrapper />
-  <BlogSection/>
-  <Footer/>
-  </>
+    <>
+      <HeroSection />
+      <VisionMissionSection />
+      <VisionMissionCardReveal />
+      <TimeLineWrapper />
+      <BlogSection />
+      {/* <Footer/> */}
+    </>
   );
 }
 
