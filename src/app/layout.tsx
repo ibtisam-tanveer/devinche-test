@@ -17,6 +17,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Devinche",
   description: "Reimagining Digital Experiences with Innovation and Excellence",
+  openGraph: {
+    title: "Devinche",
+    description: "Reimagining Digital Experiences with Innovation and Excellence",
+    url: "https://devinche.de", // Update this with your actual domain
+    siteName: "Devinche",
+    images: [
+      {
+        url: "/og-image.png", // OG image path
+        width: 1200,
+        height: 630,
+        alt: "Devinche Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Devinche",
+    description: "Reimagining Digital Experiences with Innovation and Excellence",
+    images: ["/og-image.png"], // Twitter card image
+  },
 };
 
 export default function RootLayout({
