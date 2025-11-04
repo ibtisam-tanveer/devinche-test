@@ -55,7 +55,7 @@ A WAM diagram would show how a user’s “Place Order” action flows from UI �
 ## Final Thought
 
 WAM diagrams aren’t about replacing technical documentation—they’re about enhancing understanding. In an era where web apps grow increasingly complex, a simple visual model can be the compass that keeps everyone moving in the same direction. `,
-    author: "Valleria",
+    author: "Valeriia",
     date: "2025-10-20",
     image: "/images/aa.webp",
     tags: ["Web Development", "Technology", "Future"],
@@ -106,7 +106,7 @@ Tools like Replit now support AI pair programming, while GitHub Codespaces integ
 
 Web-based editors democratize development. They lower barriers to entry, accelerate collaboration, and reflect a broader shift toward cloud-first workflows. Whether you’re a student, freelancer, or enterprise team, there’s likely a browser-based tool that fits your needs—no downloads required.
     `,
-    author: "Valleria",
+    author: "Valeriia",
     date: "2025-10-20",
     image: "/images/aa.webp",
     tags: ["Web Development", "Technology", "Future"],
@@ -205,7 +205,7 @@ Airbnb: High-quality visuals with intuitive filtering and instant map updates.
 
 Great web interfaces disappear. Users don’t notice the design—they accomplish their goals effortlessly. By prioritizing clarity, consistency, feedback, accessibility, and performance, you create experiences that don’t just look good—they work well for real humans in the real world.
     `,
-    author: "Valleria",
+    author: "Valeriia",
   date: "2025-10-20",
     image: "/images/aa.webp",
     tags: ["Web Development", "Technology", "Future"],
