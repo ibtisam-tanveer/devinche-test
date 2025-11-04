@@ -24,7 +24,7 @@ export const projects = [
       title: "Valeriia Bondareva",
       description: "Valeriia Bondareva is a data analyst and web designer from Russia with a passion for merging technical precision and creative design. She has published articles on topics such as “Sign Language Recognition with AI” and “Data Optimization for Visual Recognition,” and has contributed to the design of the Fandom Wiki for an animation project. In her role as a data analyst, Valeriia has worked extensively with complex datasets and advanced calculations, specializing in big data analysis where she leverages statistical modeling, machine learning techniques, and data visualization tools to extract actionable insights and drive informed decision-making",
       src: "valleria-website.jpg",
-      link: "https://www.linkedin.com/",
+      link: "https://www.linkedin.com/in/valeria-bondareva-06266a368/",
       color: "linear-gradient(135deg, rgba(30, 64, 175, 1) 0%, rgba(29, 78, 216, 1) 100%)"
     },
     {
