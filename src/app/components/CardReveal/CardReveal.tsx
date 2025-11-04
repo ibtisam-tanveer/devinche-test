@@ -16,7 +16,7 @@ const CardReveal = ({ i, title, description, src, link, color, range, targetScal
     return (
         <div ref={container} className='cardContainer h-screen flex items-center justify-center sticky top-0 px-4 sm:px-6 md:px-8'>
             <motion.div 
-                className='card flex flex-col relative h-[700px] sm:h-[600px] md:h-[500px] w-full max-w-[1100px] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-lg' 
+                className='card flex flex-col relative h-[700px] sm:h-[600px] md:h-[650px] w-full max-w-[1100px] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-lg' 
                 style={{ scale, background: color, top: `calc(-5vh + ${i * 25}px)`, opacity: 1 }}
             >
                 <h2 className='text-center m-0 text-lg sm:text-xl font-semibold text-white'>{title}</h2>
