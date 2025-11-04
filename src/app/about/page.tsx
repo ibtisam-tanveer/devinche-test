@@ -153,7 +153,7 @@ const AboutPage: React.FC = () => {
                     </div>
                     <h3 className="text-2xl lg:text-3xl font-semibold text-white mb-4">Our Vision</h3>
                     <p className="text-white/70 leading-relaxed text-lg mb-6">
-                      To revolutionize the digital landscape by creating innovative solutions that empower businesses and individuals to achieve their full potential in an ever-evolving technological world.
+                    We strive to be the leading platform for smart federated and AI systems
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-3">
@@ -185,7 +185,7 @@ const AboutPage: React.FC = () => {
                     </div>
                     <h3 className="text-2xl lg:text-3xl font-semibold text-white mb-4">Our Mission</h3>
                     <p className="text-white/70 leading-relaxed text-lg mb-6">
-                      To deliver cutting-edge digital solutions with uncompromising quality, exceptional user experiences, and unwavering commitment to our clients' success through innovative technology and dedicated service.
+                      Turning complexity into simplicity
                     </p>
                     <div className="space-y-3">
                       <div className="flex items-center space-x-3">
