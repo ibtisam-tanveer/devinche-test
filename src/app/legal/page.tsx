@@ -80,7 +80,15 @@ const LegalPage: React.FC = () => {
                           <span className="text-white ml-2 font-bold text-lg">Devinche</span>
                         </div>
                       </div>
-                      
+                       <div className="space-y-4">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
+                        <div>
+                          <span className="text-cyan-400 font-semibold">Contact Person:</span>
+                          <span className="text-white ml-2 font-bold text-lg">Muhammad Ibtisam Tanveer</span>
+                        </div>
+                            </div>
+                      </div>
                       <div className="flex items-center space-x-4">
                         <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                         <div>
@@ -96,6 +104,14 @@ const LegalPage: React.FC = () => {
                           <span className="text-white ml-2">Web Engineering Master's Program</span>
                         </div>
                       </div>
+
+                       <div className="flex items-center space-x-4">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                        <div>
+                          <span className="text-blue-400 font-semibold">Address:</span>
+                          <span className="text-white ml-2">Reichenhainer Straße 37, 09126 Chemnitz, Germany</span>
+                        </div>
+                      </div>
                       
                       <div className="flex items-center space-x-4">
                         <div className="w-3 h-3 bg-green-500 rounded-full"></div>
@@ -105,7 +121,7 @@ const LegalPage: React.FC = () => {
                             href="mailto:jinx.officialfive@gmail.com"
                             className="text-cyan-400 hover:text-cyan-300 ml-2 underline transition-colors duration-300"
                           >
-                            devinche.officialfive@gmail.com
+                           muhammad-ibtisam.tanveer@s2024.tu-chemnitz.de
                           </a>
                         </div>
                       </div>
