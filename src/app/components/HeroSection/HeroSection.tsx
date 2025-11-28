@@ -100,7 +100,7 @@ const HeroSection = () => {
       )} */}
 
             <div className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 relative overflow-hidden pt-20 sm:pt-24 lg:pt-0">
-
+              
                 {/* Background Elements */}
                 <div className="absolute inset-0 -z-10">
                     <div className="absolute top-10 sm:top-20 left-4 sm:left-10 lg:left-20 w-32 sm:w-48 lg:w-72 h-32 sm:h-48 lg:h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -115,9 +115,38 @@ const HeroSection = () => {
                             ✨ Next-Gen Digital Solutions
                         </div>
 
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-tight sm:leading-none bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent animate-fade-in">
-                            DEVINCHE
-                        </h1>
+                        <div className="relative">
+                            {/* Santa Cap */}
+                            <div className="absolute -top-10 sm:-top-12 md:-top-14 lg:-top-18 xl:-top-22 -left-8 sm:left-[calc(50%-16rem)] md:left-[calc(50%-18rem)] lg:-left-10 xl:-left-10 z-10 pointer-events-none">
+                                <svg 
+                                    viewBox="0 0 100 90" 
+                                    className="w-20 h-18 sm:w-10 sm:h-22 md:w-23 md:h-26 lg:w-25 lg:h-30 xl:w-36 xl:h-34"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    {/* Red cap body - conical shape */}
+                                    <path 
+                                        d="M 25 70 L 25 50 L 50 5 L 75 50 L 75 70 Z" 
+                                        fill="#DC2626"
+                                    />
+                                    {/* White fur trim - crescent shape at bottom */}
+                                    <path 
+                                        d="M 25 70 Q 35 72 50 72 Q 65 72 75 70" 
+                                        fill="#FFFFFF"
+                                    />
+                                    {/* White pom-pom at top */}
+                                    <circle 
+                                        cx="50" 
+                                        cy="5" 
+                                        r="7" 
+                                        fill="#FFFFFF"
+                                    />
+                                </svg>
+                            </div>
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-tight sm:leading-none bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent animate-fade-in">
+                                DEVINCHE
+                            </h1>
+                        </div>
 
                         <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl opacity-90 font-light leading-relaxed px-2 sm:px-4 lg:px-0">
                             Reimagining Digital Experiences with

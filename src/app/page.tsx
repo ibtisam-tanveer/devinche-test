@@ -5,12 +5,14 @@ import VisionMissionCardReveal from './components/TeamSection/TeamSection';
 import BlogSection from './components/BlogSection/BlogSection';
 import Footer from './components/Footer/Footer';
 import TimeLineWrapper from './components/TimeLineWrapper/TimeLineWrapper';
+import { ParticlesBackground } from './components/ParticlesBackground/ParticlesBackground';
 
 
 
 export default function Home() {
   return (
     <>
+            <ParticlesBackground />
       <HeroSection />
       <VisionMissionSection />
       <VisionMissionCardReveal />

@@ -49,6 +49,57 @@ body {
   }
 }
 
+@keyframes cap-bounce {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-5deg);
+  }
+
+  25% {
+    transform: translateY(-4px) rotate(2deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(-3deg);
+  }
+
+  75% {
+    transform: translateY(-3px) rotate(1deg);
+  }
+}
+
+@keyframes tassel-sway {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes tassel-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
 @keyframes glow {
 
   0%,
@@ -87,6 +138,19 @@ body {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
+}
+
+.animate-cap-bounce {
+  animation: cap-bounce 2s ease-in-out infinite;
+}
+
+.animate-tassel-sway {
+  animation: tassel-sway 1.5s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.animate-tassel-pulse {
+  animation: tassel-pulse 2s ease-in-out infinite;
 }
 
 /* Custom scrollbar */
